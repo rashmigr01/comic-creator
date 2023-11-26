@@ -18,7 +18,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -o https://github.com/rashmigr01/comic-creator.git"
   },
   "eslintConfig": {
     "extends": [
