@@ -30,6 +30,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Configure Git Remote
+        run: git remote add origin https://github.com/rashmigr01/comic-creator.git
+
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && success()
         run: npm run deploy
