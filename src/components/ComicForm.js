@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TextField, Button, Box, Typography } from '@mui/material';
 
 const ComicForm = ({ onSubmit }) => {
   const [panelTexts, setPanelTexts] = useState(Array(10).fill(''));
@@ -14,19 +15,30 @@ const ComicForm = ({ onSubmit }) => {
     onSubmit(panelTexts);
   };
 
+  const isButtonDisabled = panelTexts.some((text) => text.trim() === '');
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="comic-form">
       {panelTexts.map((text, index) => (
-        <div key={index}>
-          <label>Panel {index + 1}:</label>
-          <input
-            type="text"
+        <Box key={index} mb={2} display={'flex'} flexDirection={'row'}>
+          <Typography whiteSpace={'nowrap'} width={'7rem'}> Panel {index + 1}: </Typography>
+          <TextField
+            variant="outlined"
+            fullWidth
             value={text}
             onChange={(e) => handleChange(index, e.target.value)}
+            inputProps={{
+              style: {
+                padding: 5
+              },
+              placeholder: `Enter a text prompt for panel ${index + 1}`,
+           }}
           />
-        </div>
+        </Box>
       ))}
-      <button type="submit">Generate Comic</button>
+      <Button variant="contained" type="submit" color="primary" disabled={isButtonDisabled} sx={{ marginLeft: 'auto', marginRight: 'auto'}}>
+        Generate Comic
+      </Button>
     </form>
   );
 };
