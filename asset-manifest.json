@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/comic-creator/static/css/main.f855e6bc.css",
+    "main.js": "/comic-creator/static/js/main.63801ed8.js",
+    "static/js/787.7cf67f91.chunk.js": "/comic-creator/static/js/787.7cf67f91.chunk.js",
+    "index.html": "/comic-creator/index.html",
+    "main.f855e6bc.css.map": "/comic-creator/static/css/main.f855e6bc.css.map",
+    "main.63801ed8.js.map": "/comic-creator/static/js/main.63801ed8.js.map",
+    "787.7cf67f91.chunk.js.map": "/comic-creator/static/js/787.7cf67f91.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.63801ed8.js"
+  ]
+}
