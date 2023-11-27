@@ -1,9 +1,9 @@
 import './App.css';
-import Layout from './layout/AppLayout';
+import BaseLayout from './layout/BaseLayout';
 
 function App() {
   return (
-    <Layout />
+    <BaseLayout />
   );
 }
 

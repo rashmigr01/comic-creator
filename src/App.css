@@ -18,3 +18,27 @@ body, html {
   display: flex;
   flex-direction: column;
 }
+
+.dark, .dark input {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  transition: all 400ms;
+}
+
+.light, .light input {
+  background-color: #ffffff;
+  color: #2b2b2b;
+  transition: all 400ms;
+}
+
+.dark fieldset{
+  border-color: #ffffff;
+}
+
+.dark button:disabled {
+  color: #ffffff4d;
+}
+
+.dark p {
+  color: #ffffff;
+}
