@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, CssBaseline, Container, Divider } from '@mui/material';
+import { Grid, CssBaseline, Container } from '@mui/material';
 import ComicForm from '../components/ComicForm';
 import ComicDisplay from '../components/ComicDisplay';
 import query from '../api/GenerateComic';
@@ -27,7 +27,6 @@ function Layout() {
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={6} md={4}>
                     <ComicForm onSubmit={generateComic} />
-                    <Divider orientation="vertical" variant="middle" flexItem/>
                 </Grid>
                 <Grid item xs={12} sm={6} md={8}>
                     <ComicDisplay images={comicImages} />
