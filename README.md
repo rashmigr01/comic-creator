@@ -6,8 +6,9 @@
 A React application which utilizes an API to generate 10 comic images from text prompt and creates a strip. The strip of images can be resized and rearranged to download a suitable comic image.
 
 A screenshot of an example comic generation:
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot from 2023-11-27 09-11-59](https://github.com/rashmigr01/comic-creator/assets/77162931/26b7e25f-9e28-4671-af3a-660340a12eeb)
 ## Table of Contents
+
 
 - [Tech Stack](#tech-stack)
 
@@ -104,7 +105,8 @@ During development, you can install packages to use frameworks or libraries usin
 ```
 
 The main code base architecture can be visualized as follows:
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+![image](https://github.com/rashmigr01/comic-creator/assets/77162931/2066eb03-b591-45ae-b590-5886e17790f7)
 
 The `AppLayout` along with the two main files of `ComicForm` and `ComicDisplay` are responsible for the functionality. Another file of interest is the `GenerateComic` API call function which is responsible for the text to image generation.
 
@@ -113,38 +115,38 @@ The `AppLayout` along with the two main files of `ComicForm` and `ComicDisplay` 
 
 Here are some comic examples as output by the application:
 
-#### Test 1
+#### Comic 1
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![comic_strip_6](https://github.com/rashmigr01/comic-creator/assets/77162931/5405910a-49a3-4f14-b8cc-ca71d71f6179)
 
-#### Test 2
+#### Comic 2
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![comic_display (5)](https://github.com/rashmigr01/comic-creator/assets/77162931/e904b0ff-c5e5-4b70-a842-f1f7705e087b)
 
-#### Test 3
+#### Comic 3
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
+![comic_display (2)](https://github.com/rashmigr01/comic-creator/assets/77162931/73c3805b-7feb-42d7-b345-3657804c2347)
 
 ## User Flow
 
 The following steps are part of the user flow on the comic creator:
 
 - Input text prompts for all 10 panels and click on the `GENERATE COMIC` button to make API calls.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://github.com/rashmigr01/comic-creator/assets/77162931/65f1b734-eeb1-4c0c-8ce5-d2ef0f444c0b)
 
 - The progress bar depicts the number of returned API calls out of ten and thus the number of generated images.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot from 2023-11-27 09-08-53](https://github.com/rashmigr01/comic-creator/assets/77162931/af6fa7eb-1f91-40bc-b629-cf6501975c4e)
 
 - The default comic strip of a vertical layout is created.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot from 2023-11-27 09-10-08](https://github.com/rashmigr01/comic-creator/assets/77162931/82c3e793-154a-4fd4-83e1-0160e95413d0)
 
 - The pictures can be resized and reordered to create a more appealing and suitable comic strip.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Screenshot from 2023-11-27 09-11-59](https://github.com/rashmigr01/comic-creator/assets/77162931/729d5a5c-bcb6-454a-a697-610db3dceedd)
+
+
 
 - Click on the `DOWNLOAD IMAGE` button to download a `comic_strip.png` image of the current strip.
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![comic_strip_6](https://github.com/rashmigr01/comic-creator/assets/77162931/5405910a-49a3-4f14-b8cc-ca71d71f6179)
 
 - Repeat the above steps to create more comics.
 
