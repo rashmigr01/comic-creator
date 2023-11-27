@@ -36,11 +36,11 @@ const ComicDisplay = ({ images }) => {
 
   return (
     <div>
-      <div style={{paddingLeft: '10px', display: 'flex'}}>
+      <div style={{paddingLeft: '10px', paddingBottom: '10px', display: 'flex'}}>
         <Button variant="contained" type="submit" color="primary" sx={{marginRight: 'auto'}} onClick={handleDownloadImage}>Download Image</Button>
-        <div style={{marginLeft: 'auto', marginRight: 'auto'}}>Resize, Rearrange, Adjust away!</div>
+        <div style={{margin: 'auto', fontWeight: 'bold', opacity: '0.5', paddingLeft: '10px'}}>Tip: Resize by dragging the bottom left corner of images and rearrange them by dragging and dropping to create your favourite comic strip layout!</div>
       </div>
-      <div ref={gridContainerRef} style={{padding: '10px'}}>
+      <div ref={gridContainerRef} style={{padding: '10px', border: '2px solid black'}}>
       <ResponsiveGridLayout
         className="layout"
         breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
