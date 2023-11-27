@@ -1,4 +1,4 @@
-async function query(data) {
+async function query(data, updateProgress) {
     console.log("API call initiated");
     const response = await fetch(
       "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
@@ -14,6 +14,7 @@ async function query(data) {
     );
     const result = await response.blob();
     console.log("API call complete");
+    updateProgress();
     return result;
   }
   

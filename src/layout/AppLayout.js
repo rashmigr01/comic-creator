@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, CssBaseline, Container } from '@mui/material';
+import { Grid, CssBaseline, Container, Typography } from '@mui/material';
+import LinearProgressWithLabel from '../components/LinearProgress';
 import ComicForm from '../components/ComicForm';
 import ComicDisplay from '../components/ComicDisplay';
 import query from '../api/GenerateComic';
@@ -8,9 +9,15 @@ import '../App.css';
 function Layout() {
   const [comicImages, setComicImages] = useState([]);
 
+  const [progress, setProgress] = useState(0);
+
+  const [isSubmitPressed, setIsSubmitPressed] = useState(false);
+
   const generateComic = async (panelTexts) => {
     try {
-      const imageBlobPromises = panelTexts.map((text) => query({ inputs: text }));
+      setIsSubmitPressed(true);
+      setProgress(0);
+      const imageBlobPromises = panelTexts.map((text) => query({ inputs: text }, () => setProgress((prev) => prev + 1)));
       const images = await Promise.all(imageBlobPromises);
       console.log('Generated comic images:', images);
       setComicImages(images);
@@ -29,7 +36,7 @@ function Layout() {
                     <ComicForm onSubmit={generateComic} />
                 </Grid>
                 <Grid item xs={12} sm={6} md={8}>
-                    <ComicDisplay images={comicImages} />
+                    {isSubmitPressed ? progress < 10 ? <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%'}}><Typography>Generating comic strip...</Typography><LinearProgressWithLabel value={(progress / 10) * 100} /></div> : <ComicDisplay images={comicImages} /> : <Typography style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '100%'}}>Enter text prompts to generate your comic strip!</Typography>}
                 </Grid>
             </Grid>
         </Container>
